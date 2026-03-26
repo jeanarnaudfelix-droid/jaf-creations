@@ -1,107 +1,252 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<title>JAF Créations</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JAF Créations</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Helvetica, Arial, sans-serif;
+      background: #0d0d0d;
+      color: #fff;
+    }
 
-<style>
-body {
-    margin: 0;
-    font-family: Helvetica, Arial, sans-serif;
-    background: #0d0d0d;
-    color: white;
-}
+    header {
+      text-align: center;
+      padding: 42px 20px 24px;
+    }
 
-header {
-    text-align: center;
-    padding: 50px 20px;
-    font-size: 32px;
-    letter-spacing: 3px;
-}
+    h1 {
+      margin: 0;
+      font-size: 34px;
+      letter-spacing: 4px;
+      font-weight: 300;
+    }
 
-.sub {
-    text-align: center;
-    color: #aaa;
-    margin-bottom: 40px;
-}
+    .subtitle {
+      margin-top: 12px;
+      color: #a8a8a8;
+      font-size: 16px;
+    }
 
-.container {
-    display: grid;
-    gap: 30px;
-    padding: 20px;
-}
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 18px 40px;
+    }
 
-.card {
-    background: #1a1a1a;
-    border-radius: 16px;
-    overflow: hidden;
-    transition: 0.3s;
-}
+    .product {
+      background: #171717;
+      border-radius: 18px;
+      padding: 18px;
+      margin-bottom: 28px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.28);
+    }
 
-.card:hover {
-    transform: scale(1.02);
-}
+    .product h2 {
+      margin: 0 0 8px;
+      font-size: 22px;
+      font-weight: 500;
+    }
 
-.card img {
-    width: 100%;
-}
+    .meta {
+      color: #cfcfcf;
+      line-height: 1.5;
+      font-size: 15px;
+    }
 
-.card h2 {
-    padding: 15px;
-    font-size: 20px;
-}
+    .price {
+      margin-top: 10px;
+      color: #d5b06a;
+      font-size: 18px;
+      font-weight: 600;
+    }
 
-.card p {
-    padding: 0 15px 15px;
-    color: #bbb;
-}
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 18px;
+      margin-bottom: 18px;
+    }
 
-.card a {
-    display: block;
-    text-align: center;
-    padding: 15px;
-    background: white;
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-}
+    .gallery img {
+      width: 100%;
+      display: block;
+      border-radius: 10px;
+      background: #222;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+    }
 
-footer {
-    text-align: center;
-    padding: 40px;
-    font-size: 12px;
-    color: #666;
-}
-</style>
+    .btn {
+      display: inline-block;
+      margin-top: 6px;
+      padding: 12px 18px;
+      border-radius: 999px;
+      background: #fff;
+      color: #111;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .btn:hover {
+      background: #ececec;
+    }
+
+    footer {
+      text-align: center;
+      color: #777;
+      font-size: 12px;
+      padding: 10px 20px 30px;
+    }
+
+    @media (max-width: 640px) {
+      h1 {
+        font-size: 30px;
+      }
+
+      .product h2 {
+        font-size: 20px;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<header>JAF Créations</header>
-<div class="sub">Sélection de pièces uniques</div>
+  <header>
+    <h1>JAF CRÉATIONS</h1>
+    <div class="subtitle">Sélection de pièces uniques</div>
+  </header>
 
-<div class="container">
+  <div class="container">
 
-<div class="card">
-<img src="https://via.placeholder.com/800">
-<h2>Sac cuir artisanal</h2>
-<p>Pièce unique — fabrication haut de gamme</p>
-<a href="#">Voir sur eBay</a>
-</div>
+    <!-- BAGUE 1 -->
+    <section class="product">
+      <h2>Rosa Maria BIKRAM</h2>
+      <div class="meta">Grenat facetté & diamants gris</div>
+      <div class="meta">Pièce de caractère à halo minéral.</div>
+      <div class="price">1’695 CHF</div>
+      <div class="gallery">
+        <img src="IMG_9890.JPG" alt="Rosa Maria BIKRAM vue 1">
+        <img src="IMG_9888.JPG" alt="Rosa Maria BIKRAM vue 2">
+        <img src="IMG_9889.JPG" alt="Rosa Maria BIKRAM vue 3">
+        <img src="IMG_9891.JPG" alt="Rosa Maria BIKRAM vue 4">
+      </div>
+      <a class="btn" href="#" target="_blank">Voir sur eBay</a>
+    </section>
 
-<div class="card">
-<img src="https://via.placeholder.com/800">
-<h2>Bague argent brut</h2>
-<p>Design organique — fait main</p>
-<a href="#">Voir sur eBay</a>
-</div>
+    <!-- BAGUE 2 -->
+    <section class="product">
+      <h2>Rosa Maria BIKRAM</h2>
+      <div class="meta">Prasiolite & saphirs roses</div>
+      <div class="meta">Design organique et présence joaillière.</div>
+      <div class="price">1’530 CHF</div>
+      <div class="gallery">
+        <img src="IMG_9870.JPG" alt="Rosa Maria BIKRAM prasiolite vue 1">
+        <img src="IMG_9874.JPG" alt="Rosa Maria BIKRAM prasiolite vue 2">
+        <img src="IMG_9873.JPG" alt="Rosa Maria BIKRAM prasiolite vue 3">
+        <img src="IMG_9843.JPG" alt="Rosa Maria BIKRAM prasiolite vue 4">
+      </div>
+      <a class="btn" href="#" target="_blank">Voir sur eBay</a>
+    </section>
 
-</div>
+    <!-- BAGUE 3 -->
+    <section class="product">
+      <h2>Rosa Maria BEGUM</h2>
+      <div class="meta">Grenat & pavé émeraudes</div>
+      <div class="meta">Pièce signature, dense et précieuse.</div>
+      <div class="price">1’670 CHF</div>
+      <div class="gallery">
+        <img src="IMG_9849.JPG" alt="Rosa Maria BEGUM vue 1">
+        <img src="IMG_9854.JPG" alt="Rosa Maria BEGUM vue 2">
+        <img src="IMG_9851.JPG" alt="Rosa Maria BEGUM vue 3">
+        <img src="IMG_9853.JPG" alt="Rosa Maria BEGUM vue 4">
+      </div>
+      <a class="btn" href="#" target="_blank">Voir sur eBay</a>
+    </section>
 
-<footer>
-© JAF Créations
-</footer>
+    <!-- BAGUE 4 -->
+    <section class="product">
+      <h2>Rosa Maria JULIA</h2>
+      <div class="meta">Quartz & émeraudes</div>
+      <div class="meta">Élégance brute, contraste minéral et transparence.</div>
+      <div class="price">1’500 CHF</div>
+      <div class="gallery">
+        <img src="IMG_9861.JPG" alt="Rosa Maria JULIA vue 1">
+        <img src="IMG_9860.JPG" alt="Rosa Maria JULIA vue 2">
+        <img src="IMG_9858.JPG" alt="Rosa Maria JULIA vue 3">
+        <img src="IMG_9857 (1).JPG" alt="Rosa Maria JULIA vue 4">
+      </div>
+      <a class="btn" href="#" target="_blank">Voir sur eBay</a>
+    </section>
+
+    <!-- BAGUE 5 -->
+    <section class="product">
+      <h2>Rosa Maria BASKAR</h2>
+      <div class="meta">Quartz & diamants gris</div>
+      <div class="meta">Pièce majeure, ample et très expressive.</div>
+      <div class="price">2’450 CHF</div>
+      <div class="gallery">
+        <img src="IMG_9867.JPG" alt="Rosa Maria BASKAR vue 1">
+        <img src="IMG_9863.JPG" alt="Rosa Maria BASKAR vue 2">
+        <img src="IMG_9868.JPG" alt="Rosa Maria BASKAR vue 3">
+        <img src="IMG_9882.JPG" alt="Rosa Maria BASKAR vue 4">
+      </div>
+      <a class="btn" href="#" target="_blank">Voir sur eBay</a>
+    </section>
+
+    <!-- BAGUE 6 -->
+    <section class="product">
+      <h2>Rosa Maria BIKRAM</h2>
+      <div class="meta">Topaze & diamants gris</div>
+      <div class="meta">Contraste minéral, halo lumineux.</div>
+      <div class="price">1’820 CHF</div>
+      <div class="gallery">
+        <img src="IMG_9886.JPG" alt="Rosa Maria BIKRAM topaze vue 1">
+        <img src="IMG_9865.JPG" alt="Rosa Maria BIKRAM topaze vue 2">
+        <img src="IMG_9866.JPG" alt="Rosa Maria BIKRAM topaze vue 3">
+        <img src="IMG_9864.JPG" alt="Rosa Maria BIKRAM topaze vue 4">
+      </div>
+      <a class="btn" href="#" target="_blank">Voir sur eBay</a>
+    </section>
+
+    <!-- BAGUE 7 -->
+    <section class="product">
+      <h2>Rosa Maria BEGUM</h2>
+      <div class="meta">Quartz & diamants noirs</div>
+      <div class="meta">Pièce sombre et contemporaine.</div>
+      <div class="price">1’135 CHF</div>
+      <div class="gallery">
+        <img src="IMG_9836.JPG" alt="Rosa Maria BEGUM quartz noir vue 1">
+        <img src="IMG_9842.JPG" alt="Rosa Maria BEGUM quartz noir vue 2">
+        <img src="IMG_9837.JPG" alt="Rosa Maria BEGUM quartz noir vue 3">
+        <img src="IMG_9838.JPG" alt="Rosa Maria BEGUM quartz noir vue 4">
+      </div>
+      <a class="btn" href="#" target="_blank">Voir sur eBay</a>
+    </section>
+
+    <!-- BAGUE 8 -->
+    <section class="product">
+      <h2>Rosa Maria BEGUM</h2>
+      <div class="meta">Quartz & diamants noirs</div>
+      <div class="meta">Variante de la ligne BEGUM.</div>
+      <div class="price">1’120 CHF</div>
+      <div class="gallery">
+        <img src="IMG_9885.JPG" alt="Rosa Maria BEGUM variante vue 1">
+        <img src="IMG_9884.JPG" alt="Rosa Maria BEGUM variante vue 2">
+        <img src="IMG_9883.JPG" alt="Rosa Maria BEGUM variante vue 3">
+        <img src="IMG_9881.JPG" alt="Rosa Maria BEGUM variante vue 4">
+      </div>
+      <a class="btn" href="#" target="_blank">Voir sur eBay</a>
+    </section>
+
+  </div>
+
+  <footer>
+    © JAF Créations
+  </footer>
 
 </body>
 </html>

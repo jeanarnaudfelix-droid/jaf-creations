@@ -1,181 +1,295 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JAF Créations</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JAF Créations</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Helvetica, Arial, sans-serif;
+      background: #0d0d0d;
+      color: #fff;
+    }
 
-<style>
-body {
-    margin: 0;
-    font-family: Helvetica, Arial, sans-serif;
-    background: #0d0d0d;
-    color: white;
-}
+    header {
+      text-align: center;
+      padding: 40px 20px 24px;
+    }
 
-header {
-    text-align: center;
-    padding: 40px;
-}
+    .logo {
+      max-width: 320px;
+      width: 80%;
+      height: auto;
+      display: block;
+      margin: 0 auto 18px auto;
+    }
 
-h1 {
-    letter-spacing: 4px;
-    font-weight: 300;
-}
+    h1 {
+      margin: 0;
+      font-size: 30px;
+      letter-spacing: 4px;
+      font-weight: 300;
+    }
 
-.container {
-    padding: 20px;
-}
+    .subtitle {
+      margin-top: 12px;
+      color: #a8a8a8;
+      font-size: 16px;
+    }
 
-.product {
-    margin-bottom: 50px;
-}
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 18px 40px;
+    }
 
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 10px;
-}
+    .product {
+      background: #171717;
+      border-radius: 18px;
+      padding: 18px;
+      margin-bottom: 28px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.28);
+    }
 
-.gallery img {
-    width: 100%;
-    border-radius: 10px;
-    cursor: pointer;
-}
+    .product h2 {
+      margin: 0 0 8px;
+      font-size: 22px;
+      font-weight: 500;
+    }
 
-/* ZOOM */
-#overlay {
-    position: fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background: rgba(0,0,0,0.95);
-    display:none;
-    justify-content:center;
-    align-items:center;
-    z-index:999;
-}
+    .meta {
+      color: #cfcfcf;
+      line-height: 1.5;
+      font-size: 15px;
+    }
 
-#overlay img {
-    max-width:90%;
-    max-height:90%;
-}
+    .price {
+      margin-top: 10px;
+      color: #d5b06a;
+      font-size: 18px;
+      font-weight: 600;
+    }
 
-.price {
-    color:#d5b06a;
-    margin-top:10px;
-}
-</style>
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 18px;
+      margin-bottom: 18px;
+    }
 
+    .gallery img {
+      width: 100%;
+      display: block;
+      border-radius: 10px;
+      background: #222;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      cursor: pointer;
+      transition: opacity 0.2s ease;
+    }
+
+    .gallery img:hover {
+      opacity: 0.9;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 6px;
+      padding: 12px 18px;
+      border-radius: 999px;
+      background: #fff;
+      color: #111;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .btn:hover {
+      background: #ececec;
+    }
+
+    footer {
+      text-align: center;
+      color: #777;
+      font-size: 12px;
+      padding: 10px 20px 30px;
+    }
+
+    /* Zoom image */
+    #overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.94);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      padding: 20px;
+    }
+
+    #overlay img {
+      max-width: 95vw;
+      max-height: 92vh;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 640px) {
+      h1 {
+        font-size: 26px;
+      }
+
+      .product h2 {
+        font-size: 20px;
+      }
+
+      .logo {
+        max-width: 260px;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<header>
-<h1>JAF CRÉATIONS</h1>
-<div>Sélection de pièces uniques</div>
-</header>
+  <header>
+    <img src="logo-jaf.png" alt="JAF Créations" class="logo">
+    <div class="subtitle">Sélection de pièces uniques</div>
+  </header>
 
-<div class="container">
+  <div class="container">
 
-<!-- BAGUE 1 -->
-<div class="product">
-<h3>Grenat & émeraudes</h3>
-<div class="gallery">
-<img src="IMG_9849.JPG" onclick="zoom(this)">
-<img src="IMG_9851.JPG" onclick="zoom(this)">
-<img src="IMG_9853.JPG" onclick="zoom(this)">
-<img src="IMG_9854.JPG" onclick="zoom(this)">
-</div>
-<div class="price">1’670 CHF</div>
-</div>
+    <section class="product">
+      <h2>Rosa Maria BIKRAM</h2>
+      <div class="meta">Grenat facetté & diamants gris</div>
+      <div class="meta">Pièce de caractère à halo minéral.</div>
+      <div class="price">1’695 CHF</div>
+      <div class="gallery">
+        <img src="IMG_9890.JPG" alt="" onclick="zoom(this)">
+        <img src="IMG_9888.JPG" alt="" onclick="zoom(this)">
+        <img src="IMG_9889.JPG" alt="" onclick="zoom(this)">
+        <img src="IMG_9891.JPG" alt="" onclick="zoom(this)">
+      </div>
+      <a class="btn" href="#" target="_blank">Voir sur eBay</a>
+    </section>
 
-<!-- BAGUE 2 -->
-<div class="product">
-<h3>Prasiolite & saphirs roses</h3>
-<div class="gallery">
-<img src="IMG_9843.JPG" onclick="zoom(this)">
-<img src="IMG_9844.JPG" onclick="zoom(this)">
-<img src="IMG_9845.JPG" onclick="zoom(this)">
-<img src="IMG_9847.JPG" onclick="zoom(this)">
-</div>
-<div class="price">1’530 CHF</div>
-</div>
+    <section class="product">
+      <h2>Rosa Maria BIKRAM</h2>
+      <div class="meta">Prasiolite & saphirs roses</div>
+      <div class="meta">Design organique et présence joaillière.</div>
+      <div class="price">1’530 CHF</div>
+      <div class="gallery">
+        <img src="IMG_9870.JPG" alt="" onclick="zoom(this)">
+        <img src="IMG_9874.JPG" alt="" onclick="zoom(this)">
+        <img src="IMG_9873.JPG" alt="" onclick="zoom(this)">
+        <img src="IMG_9843.JPG" alt="" onclick="zoom(this)">
+      </div>
+      <a class="btn" href="#" target="_blank">Voir sur eBay</a>
+    </section>
 
-<!-- BAGUE 3 -->
-<div class="product">
-<h3>Quartz & émeraudes</h3>
-<div class="gallery">
-<img src="IMG_9857 (1).JPG" onclick="zoom(this)">
-<img src="IMG_9858 (1).JPG" onclick="zoom(this)">
-<img src="IMG_9860.JPG" onclick="zoom(this)">
-<img src="IMG_9861.JPG" onclick="zoom(this)">
-</div>
-<div class="price">1’500 CHF</div>
-</div>
+    <section class="product">
+      <h2>Rosa Maria BEGUM</h2>
+      <div class="meta">Grenat & pavé émeraudes</div>
+      <div class="meta">Pièce signature, dense et précieuse.</div>
+      <div class="price">1’670 CHF</div>
+      <div class="gallery">
+        <img src="IMG_9849.JPG" alt="" onclick="zoom(this)">
+        <img src="IMG_9854.JPG" alt="" onclick="zoom(this)">
+        <img src="IMG_9851.JPG" alt="" onclick="zoom(this)">
+        <img src="IMG_9853.JPG" alt="" onclick="zoom(this)">
+      </div>
+      <a class="btn" href="#" target="_blank">Voir sur eBay</a>
+    </section>
 
-<!-- BAGUE 4 -->
-<div class="product">
-<h3>Quartz & diamants gris</h3>
-<div class="gallery">
-<img src="IMG_9863.JPG" onclick="zoom(this)">
-<img src="IMG_9865.JPG" onclick="zoom(this)">
-<img src="IMG_9867.JPG" onclick="zoom(this)">
-<img src="IMG_9868.JPG" onclick="zoom(this)">
-</div>
-<div class="price">2’450 CHF</div>
-</div>
+    <section class="product">
+      <h2>Rosa Maria JULIA</h2>
+      <div class="meta">Quartz & émeraudes</div>
+      <div class="meta">Élégance brute, contraste minéral et transparence.</div>
+      <div class="price">1’500 CHF</div>
+      <div class="gallery">
+        <img src="IMG_9861.JPG" alt="" onclick="zoom(this)">
+        <img src="IMG_9860.JPG" alt="" onclick="zoom(this)">
+        <img src="IMG_9858 (1).JPG" alt="" onclick="zoom(this)">
+        <img src="IMG_9857 (1).JPG" alt="" onclick="zoom(this)">
+      </div>
+      <a class="btn" href="#" target="_blank">Voir sur eBay</a>
+    </section>
 
-<!-- BAGUE 5 -->
-<div class="product">
-<h3>Topaze & diamants gris</h3>
-<div class="gallery">
-<img src="IMG_9865.JPG" onclick="zoom(this)">
-<img src="IMG_9866.JPG" onclick="zoom(this)">
-<img src="IMG_9886.JPG" onclick="zoom(this)">
-<img src="IMG_9870.JPG" onclick="zoom(this)">
-</div>
-<div class="price">1’820 CHF</div>
-</div>
+    <section class="product">
+      <h2>Rosa Maria BASKAR</h2>
+      <div class="meta">Quartz & diamants gris</div>
+      <div class="meta">Pièce majeure, ample et très expressive.</div>
+      <div class="price">2’450 CHF</div>
+      <div class="gallery">
+        <img src="IMG_9863.JPG" alt="" onclick="zoom(this)">
+        <img src="IMG_9865.JPG" alt="" onclick="zoom(this)">
+        <img src="IMG_9867.JPG" alt="" onclick="zoom(this)">
+        <img src="IMG_9868.JPG" alt="" onclick="zoom(this)">
+      </div>
+      <a class="btn" href="#" target="_blank">Voir sur eBay</a>
+    </section>
 
-<!-- BAGUE 6 -->
-<div class="product">
-<h3>Grenat facetté</h3>
-<div class="gallery">
-<img src="IMG_9888.JPG" onclick="zoom(this)">
-<img src="IMG_9889.JPG" onclick="zoom(this)">
-<img src="IMG_9890.JPG" onclick="zoom(this)">
-<img src="IMG_9891.JPG" onclick="zoom(this)">
-</div>
-<div class="price">1’695 CHF</div>
-</div>
+    <section class="product">
+      <h2>Rosa Maria BIKRAM</h2>
+      <div class="meta">Topaze & diamants gris</div>
+      <div class="meta">Contraste minéral, halo lumineux.</div>
+      <div class="price">1’820 CHF</div>
+      <div class="gallery">
+        <img src="IMG_9886.JPG" alt="" onclick="zoom(this)">
+        <img src="IMG_9871.JPG" alt="" onclick="zoom(this)">
+        <img src="IMG_9873.JPG" alt="" onclick="zoom(this)">
+        <img src="IMG_9874.JPG" alt="" onclick="zoom(this)">
+      </div>
+      <a class="btn" href="#" target="_blank">Voir sur eBay</a>
+    </section>
 
-<!-- BAGUE 7 -->
-<div class="product">
-<h3>Quartz & diamants noirs</h3>
-<div class="gallery">
-<img src="IMG_9836.JPG" onclick="zoom(this)">
-<img src="IMG_9837.JPG" onclick="zoom(this)">
-<img src="IMG_9838.JPG" onclick="zoom(this)">
-<img src="IMG_9842.JPG" onclick="zoom(this)">
-</div>
-<div class="price">1’135 CHF</div>
-</div>
+    <section class="product">
+      <h2>Rosa Maria BEGUM</h2>
+      <div class="meta">Quartz & diamants noirs</div>
+      <div class="meta">Pièce sombre et contemporaine.</div>
+      <div class="price">1’135 CHF</div>
+      <div class="gallery">
+        <img src="IMG_9836.JPG" alt="" onclick="zoom(this)">
+        <img src="IMG_9842.JPG" alt="" onclick="zoom(this)">
+        <img src="IMG_9837.JPG" alt="" onclick="zoom(this)">
+        <img src="IMG_9838.JPG" alt="" onclick="zoom(this)">
+      </div>
+      <a class="btn" href="#" target="_blank">Voir sur eBay</a>
+    </section>
 
-</div>
+    <section class="product">
+      <h2>Rosa Maria BEGUM</h2>
+      <div class="meta">Quartz & diamants noirs</div>
+      <div class="meta">Variante de la ligne BEGUM.</div>
+      <div class="price">1’120 CHF</div>
+      <div class="gallery">
+        <img src="IMG_9885.JPG" alt="" onclick="zoom(this)">
+        <img src="IMG_9884.JPG" alt="" onclick="zoom(this)">
+        <img src="IMG_9883.JPG" alt="" onclick="zoom(this)">
+        <img src="IMG_9881.JPG" alt="" onclick="zoom(this)">
+      </div>
+      <a class="btn" href="#" target="_blank">Voir sur eBay</a>
+    </section>
 
-<!-- OVERLAY -->
-<div id="overlay" onclick="this.style.display='none'">
-<img id="zoomed">
-</div>
+  </div>
 
-<script>
-function zoom(img){
-    document.getElementById("overlay").style.display="flex";
-    document.getElementById("zoomed").src = img.src;
-}
-</script>
+  <footer>
+    © JAF Créations
+  </footer>
+
+  <div id="overlay" onclick="closeZoom()">
+    <img id="zoomed-image" src="" alt="">
+  </div>
+
+  <script>
+    function zoom(img) {
+      document.getElementById('zoomed-image').src = img.src;
+      document.getElementById('overlay').style.display = 'flex';
+    }
+
+    function closeZoom() {
+      document.getElementById('overlay').style.display = 'none';
+    }
+  </script>
 
 </body>
 </html>

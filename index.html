@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>JAF Créations</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
 body {
@@ -13,6 +13,7 @@ body {
     color: white;
 }
 
+/* HEADER */
 header {
     text-align: center;
     padding: 40px 20px;
@@ -20,147 +21,109 @@ header {
 
 .logo {
     width: 120px;
-    margin-bottom: 15px;
-    opacity: 0.9;
+    margin-bottom: 20px;
 }
 
 h1 {
+    font-weight: 300;
     letter-spacing: 4px;
-    margin: 10px 0;
 }
 
 .subtitle {
     color: #aaa;
 }
 
-.container {
+/* GRID PRODUITS */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
     padding: 20px;
 }
 
-.product {
+.card {
     background: #1a1a1a;
-    border-radius: 20px;
-    margin-bottom: 30px;
+    border-radius: 12px;
     overflow: hidden;
 }
 
-.gallery {
-    display: flex;
-    overflow-x: auto;
-}
-
-.gallery img {
+/* IMAGES */
+.card img {
     width: 100%;
-    max-width: 300px;
-    margin-right: 10px;
-    border-radius: 10px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
-.product-info {
-    padding: 20px;
+.card img:hover {
+    opacity: 0.8;
 }
 
-.button {
-    display: block;
-    text-align: center;
-    background: white;
-    color: black;
-    padding: 15px;
-    border-radius: 10px;
-    margin-top: 15px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-footer {
-    text-align: center;
-    padding: 30px;
-    color: #777;
-}
-
-/* ZOOM */
-.modal {
+/* LIGHTBOX */
+.lightbox {
     display: none;
     position: fixed;
     z-index: 999;
-    padding-top: 50px;
-    left: 0;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.95);
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
 }
 
-.modal img {
-    display: block;
-    margin: auto;
+.lightbox img {
     max-width: 90%;
     max-height: 90%;
 }
-
 </style>
 </head>
 
 <body>
 
 <header>
-    <img src="logo.png" class="logo">
+    <!-- ⚠️ ADAPTE ICI -->
+    <img src="Logo.png" class="logo">
+
     <h1>JAF Créations</h1>
     <div class="subtitle">Sélection de pièces uniques</div>
 </header>
 
-<div class="container">
+<div class="grid">
 
-<!-- BAGUE 1 -->
-<div class="product">
-    <div class="gallery">
-        <img src="IMG_9836.JPG" onclick="openModal(this)">
-        <img src="IMG_9837.JPG" onclick="openModal(this)">
-        <img src="IMG_9838.JPG" onclick="openModal(this)">
-        <img src="IMG_9842.JPG" onclick="openModal(this)">
+    <!-- BAGUE 1 -->
+    <div class="card">
+        <img src="IMG_9836.JPG" onclick="openImg(this.src)">
+        <img src="IMG_9837.JPG" onclick="openImg(this.src)">
+        <img src="IMG_9838.JPG" onclick="openImg(this.src)">
+        <img src="IMG_9842.JPG" onclick="openImg(this.src)">
     </div>
-    <div class="product-info">
-        <h2>Bague Rosa Maria</h2>
-        <p>Garnet facetté & pavé émeraude</p>
-        <a href="#" class="button">Voir sur eBay</a>
-    </div>
-</div>
 
-<!-- BAGUE 2 -->
-<div class="product">
-    <div class="gallery">
-        <img src="IMG_9843.JPG" onclick="openModal(this)">
-        <img src="IMG_9844.JPG" onclick="openModal(this)">
-        <img src="IMG_9845.JPG" onclick="openModal(this)">
-        <img src="IMG_9847.JPG" onclick="openModal(this)">
+    <!-- BAGUE 2 -->
+    <div class="card">
+        <img src="IMG_9843.JPG" onclick="openImg(this.src)">
+        <img src="IMG_9844.JPG" onclick="openImg(this.src)">
+        <img src="IMG_9845.JPG" onclick="openImg(this.src)">
+        <img src="IMG_9847.JPG" onclick="openImg(this.src)">
     </div>
-    <div class="product-info">
-        <h2>Bague Argent Brut</h2>
-        <p>Design organique — fait main</p>
-        <a href="#" class="button">Voir sur eBay</a>
-    </div>
-</div>
+
+    <!-- TU DUPLIQUES POUR CHAQUE BAGUE -->
 
 </div>
 
-<footer>
-© JAF Créations
-</footer>
-
-<!-- MODAL ZOOM -->
-<div id="modal" class="modal" onclick="closeModal()">
-    <img id="modalImg">
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeImg()">
+    <img id="lightbox-img">
 </div>
 
 <script>
-function openModal(img) {
-    document.getElementById("modal").style.display = "block";
-    document.getElementById("modalImg").src = img.src;
+function openImg(src) {
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("lightbox-img").src = src;
 }
 
-function closeModal() {
-    document.getElementById("modal").style.display = "none";
+function closeImg() {
+    document.getElementById("lightbox").style.display = "none";
 }
 </script>
 

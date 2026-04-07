@@ -5,50 +5,54 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>JAF Créations</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;1,300&family=Inter:wght@300&display=swap" rel="stylesheet">
+
 <style>
+
 body {
     margin: 0;
-    font-family: Helvetica, Arial, sans-serif;
     background: #0d0d0d;
     color: white;
+    font-family: 'Inter', sans-serif;
 }
 
+/* HEADER */
 header {
     text-align: center;
-    padding: 36px 20px 50px;
+    padding: 40px 20px 60px;
 }
 
 .logo {
     display: block;
-    margin: 0 auto 34px auto;
-    width: 240px;
-    max-width: 72%;
-    height: auto;
+    margin: 0 auto 40px auto;
+    width: 170px;
+    max-width: 55%;
 }
 
-h1 {
-    margin: 0;
-    letter-spacing: 4px;
-    font-weight: 300;
-    font-size: 30px;
-}
-
+/* SLOGAN */
 .subtitle {
-    margin-top: 18px;
-    color: #d8d8d8;
-    font-size: 18px;
+    font-family: 'Cormorant', serif;
+    font-style: italic;
     font-weight: 300;
+    font-size: 24px;
+    color: #e5e5e5;
+    letter-spacing: 0.6px;
+    line-height: 1.5;
+    max-width: 520px;
+    margin: 0 auto;
 }
 
+/* INTRO */
 .intro {
-    max-width: 760px;
-    margin: 26px auto 0 auto;
-    color: #a7a7a7;
-    line-height: 1.7;
-    font-size: 16px;
-    text-align: center;
+    font-weight: 300;
+    font-size: 14px;
+    color: #9a9a9a;
+    line-height: 2.0;
+    max-width: 520px;
+    margin: 34px auto 0 auto;
 }
 
+/* CONTENT */
 .container {
     padding: 20px;
     max-width: 980px;
@@ -57,7 +61,7 @@ h1 {
 
 .product {
     margin-bottom: 52px;
-    padding-bottom: 8px;
+    padding-bottom: 12px;
     border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 
@@ -67,17 +71,19 @@ h1 {
 
 .product h3 {
     margin: 0 0 8px 0;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 400;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.4px;
 }
 
 .product p {
     margin: 0;
     color: #bdbdbd;
-    line-height: 1.45;
+    line-height: 1.5;
+    font-size: 14px;
 }
 
+/* GALLERY */
 .gallery {
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -89,24 +95,41 @@ h1 {
     width: 100%;
     border-radius: 10px;
     cursor: pointer;
-    display: block;
     aspect-ratio: 1 / 1;
     object-fit: cover;
     background: #1e1e1e;
 }
 
+/* PRICE */
 .price {
-    color: #ffffff;
     margin-top: 14px;
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 17px;
+    font-weight: 500;
 }
 
+/* CONTACT */
+.contact {
+    text-align: center;
+    margin: 70px 0 40px;
+}
+
+.contact a {
+    color: #dcdcdc;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+.contact a:hover {
+    color: white;
+}
+
+/* FOOTER */
 footer {
     text-align: center;
     color: #666;
     font-size: 12px;
-    padding: 10px 20px 30px;
+    padding: 20px;
 }
 
 /* ZOOM */
@@ -121,8 +144,6 @@ footer {
     justify-content: center;
     align-items: center;
     z-index: 999;
-    padding: 20px;
-    box-sizing: border-box;
 }
 
 #overlay img {
@@ -131,42 +152,34 @@ footer {
     border-radius: 10px;
 }
 
+/* MOBILE */
 @media (max-width: 640px) {
     .logo {
-        width: 180px;
-        max-width: 64%;
-        margin-bottom: 26px;
-    }
-
-    h1 {
-        font-size: 25px;
-        letter-spacing: 3px;
+        width: 150px;
     }
 
     .subtitle {
-        font-size: 17px;
+        font-size: 20px;
     }
 
     .intro {
-        font-size: 15px;
-        line-height: 1.65;
-        max-width: 92%;
-    }
-
-    .product h3 {
-        font-size: 20px;
+        font-size: 13px;
+        max-width: 90%;
     }
 }
-</style>
 
+</style>
 </head>
 
 <body>
 
 <header>
     <img src="Logo.png" alt="JAF Créations" class="logo">
-    <h1>JAF Créations</h1>
-    <div class="subtitle">Objets singuliers. Sélection exigeante. Élégance durable.</div>
+
+    <div class="subtitle">
+        Objets singuliers. Sélection exigeante. Élégance durable.
+    </div>
+
     <div class="intro">
         JAF Créations propose une sélection de pièces uniques, choisies pour leur esthétique, leur caractère et leur intemporalité.<br><br>
         Chaque objet s’inscrit dans une démarche de distinction, entre héritage et modernité.
@@ -175,118 +188,119 @@ footer {
 
 <div class="container">
 
-<!-- BAGUE 1 -->
+<!-- BAGUES (inchangées) -->
+
 <div class="product">
-    <h3>Quartz & diamants noirs</h3>
-    <p>Rosa Maria — pièce sombre, contemporaine et très graphique.</p>
-    <div class="gallery">
-        <img src="IMG_9836.JPG" onclick="zoom(this)">
-        <img src="IMG_9837.JPG" onclick="zoom(this)">
-        <img src="IMG_9842.JPG" onclick="zoom(this)">
-        <img src="IMG_9838.JPG" onclick="zoom(this)">
-    </div>
-    <div class="price">1’135 CHF</div>
+<h3>Quartz & diamants noirs</h3>
+<p>Rosa Maria — pièce sombre, contemporaine et très graphique.</p>
+<div class="gallery">
+<img src="IMG_9836.JPG" onclick="zoom(this)">
+<img src="IMG_9837.JPG" onclick="zoom(this)">
+<img src="IMG_9842.JPG" onclick="zoom(this)">
+<img src="IMG_9838.JPG" onclick="zoom(this)">
+</div>
+<div class="price">1’135 CHF</div>
 </div>
 
-<!-- BAGUE 2 -->
 <div class="product">
-    <h3>Prasiolite & saphirs roses</h3>
-    <p>Rosa Maria — design organique, volume affirmé et halo coloré.</p>
-    <div class="gallery">
-        <img src="IMG_9843.JPG" onclick="zoom(this)">
-        <img src="IMG_9847.JPG" onclick="zoom(this)">
-        <img src="IMG_9844.JPG" onclick="zoom(this)">
-        <img src="IMG_9845.JPG" onclick="zoom(this)">
-    </div>
-    <div class="price">1’530 CHF</div>
+<h3>Prasiolite & saphirs roses</h3>
+<p>Rosa Maria — design organique, volume affirmé et halo coloré.</p>
+<div class="gallery">
+<img src="IMG_9843.JPG" onclick="zoom(this)">
+<img src="IMG_9847.JPG" onclick="zoom(this)">
+<img src="IMG_9844.JPG" onclick="zoom(this)">
+<img src="IMG_9845.JPG" onclick="zoom(this)">
+</div>
+<div class="price">1’530 CHF</div>
 </div>
 
-<!-- BAGUE 3 -->
 <div class="product">
-    <h3>Grenat & émeraudes</h3>
-    <p>Rosa Maria — pièce au contraste fort et à la présence joaillière marquée.</p>
-    <div class="gallery">
-        <img src="IMG_9854.JPG" onclick="zoom(this)">
-        <img src="IMG_9853.JPG" onclick="zoom(this)">
-        <img src="IMG_9849.JPG" onclick="zoom(this)">
-        <img src="IMG_9851.JPG" onclick="zoom(this)">
-    </div>
-    <div class="price">1’670 CHF</div>
+<h3>Grenat & émeraudes</h3>
+<p>Rosa Maria — pièce au contraste fort et à la présence joaillière marquée.</p>
+<div class="gallery">
+<img src="IMG_9854.JPG" onclick="zoom(this)">
+<img src="IMG_9853.JPG" onclick="zoom(this)">
+<img src="IMG_9849.JPG" onclick="zoom(this)">
+<img src="IMG_9851.JPG" onclick="zoom(this)">
+</div>
+<div class="price">1’670 CHF</div>
 </div>
 
-<!-- BAGUE 4 -->
 <div class="product">
-    <h3>Quartz & émeraudes</h3>
-    <p>Rosa Maria — transparence minérale et monture expressive.</p>
-    <div class="gallery">
-        <img src="IMG_9861.JPG" onclick="zoom(this)">
-        <img src="IMG_9860.JPG" onclick="zoom(this)">
-        <img src="IMG_9857 (1).JPG" onclick="zoom(this)">
-        <img src="IMG_9858 (1).JPG" onclick="zoom(this)">
-    </div>
-    <div class="price">1’500 CHF</div>
+<h3>Quartz & émeraudes</h3>
+<p>Rosa Maria — transparence minérale et monture expressive.</p>
+<div class="gallery">
+<img src="IMG_9861.JPG" onclick="zoom(this)">
+<img src="IMG_9860.JPG" onclick="zoom(this)">
+<img src="IMG_9857 (1).JPG" onclick="zoom(this)">
+<img src="IMG_9858 (1).JPG" onclick="zoom(this)">
+</div>
+<div class="price">1’500 CHF</div>
 </div>
 
-<!-- BAGUE 5 -->
 <div class="product">
-    <h3>Quartz & diamants gris</h3>
-    <p>Rosa Maria — silhouette ample et esthétique brute haut de gamme.</p>
-    <div class="gallery">
-        <img src="IMG_9868.JPG" onclick="zoom(this)">
-        <img src="IMG_9867.JPG" onclick="zoom(this)">
-        <img src="IMG_9863.JPG" onclick="zoom(this)">
-        <img src="IMG_9865.JPG" onclick="zoom(this)">
-    </div>
-    <div class="price">2’450 CHF</div>
+<h3>Quartz & diamants gris</h3>
+<p>Rosa Maria — silhouette ample et esthétique brute haut de gamme.</p>
+<div class="gallery">
+<img src="IMG_9868.JPG" onclick="zoom(this)">
+<img src="IMG_9867.JPG" onclick="zoom(this)">
+<img src="IMG_9863.JPG" onclick="zoom(this)">
+<img src="IMG_9865.JPG" onclick="zoom(this)">
+</div>
+<div class="price">2’450 CHF</div>
 </div>
 
-<!-- BAGUE 6 -->
 <div class="product">
-    <h3>Topaze facettée & rubis</h3>
-    <p>Grande topaze facettée sublimée par un entourage de rubis, pièce à forte présence joaillière.</p>
-    <div class="gallery">
-        <img src="IMG_9874.JPG" onclick="zoom(this)">
-        <img src="IMG_9873.JPG" onclick="zoom(this)">
-        <img src="IMG_9870.JPG" onclick="zoom(this)">
-        <img src="IMG_9871.JPG" onclick="zoom(this)">
-    </div>
-    <div class="price">1’820 CHF</div>
+<h3>Topaze facettée & rubis</h3>
+<p>Grande topaze facettée sublimée par un entourage de rubis.</p>
+<div class="gallery">
+<img src="IMG_9874.JPG" onclick="zoom(this)">
+<img src="IMG_9873.JPG" onclick="zoom(this)">
+<img src="IMG_9870.JPG" onclick="zoom(this)">
+<img src="IMG_9871.JPG" onclick="zoom(this)">
+</div>
+<div class="price">1’820 CHF</div>
 </div>
 
-<!-- BAGUE 7 -->
 <div class="product">
-    <h3>Grenat facetté</h3>
-    <p>Rosa Maria — pièce de caractère, forte présence visuelle.</p>
-    <div class="gallery">
-        <img src="IMG_9891.JPG" onclick="zoom(this)">
-        <img src="IMG_9890.JPG" onclick="zoom(this)">
-        <img src="IMG_9888.JPG" onclick="zoom(this)">
-        <img src="IMG_9889.JPG" onclick="zoom(this)">
-    </div>
-    <div class="price">1’695 CHF</div>
+<h3>Grenat facetté</h3>
+<p>Rosa Maria — pièce de caractère.</p>
+<div class="gallery">
+<img src="IMG_9891.JPG" onclick="zoom(this)">
+<img src="IMG_9890.JPG" onclick="zoom(this)">
+<img src="IMG_9888.JPG" onclick="zoom(this)">
+<img src="IMG_9889.JPG" onclick="zoom(this)">
+</div>
+<div class="price">1’695 CHF</div>
 </div>
 
-<!-- BAGUE 8 -->
 <div class="product">
-    <h3>Quartz & diamants noirs</h3>
-    <p>Rosa Maria — variante de la ligne BEGUM, sombre et très contemporaine.</p>
-    <div class="gallery">
-        <img src="IMG_9881.JPG" onclick="zoom(this)">
-        <img src="IMG_9885.JPG" onclick="zoom(this)">
-        <img src="IMG_9882.JPG" onclick="zoom(this)">
-        <img src="IMG_9883.JPG" onclick="zoom(this)">
-    </div>
-    <div class="price">1’120 CHF</div>
+<h3>Quartz & diamants noirs</h3>
+<p>Rosa Maria — variante BEGUM.</p>
+<div class="gallery">
+<img src="IMG_9881.JPG" onclick="zoom(this)">
+<img src="IMG_9885.JPG" onclick="zoom(this)">
+<img src="IMG_9882.JPG" onclick="zoom(this)">
+<img src="IMG_9883.JPG" onclick="zoom(this)">
+</div>
+<div class="price">1’120 CHF</div>
 </div>
 
+</div>
+
+<!-- CONTACT -->
+<div class="contact">
+    <a href="mailto:contact@jaf-creations.com">
+        Contact — contact@jaf-creations.com
+    </a>
 </div>
 
 <footer>
-    © JAF Créations
+© JAF Créations
 </footer>
 
 <div id="overlay" onclick="this.style.display='none'">
-    <img id="zoomed">
+<img id="zoomed">
 </div>
 
 <script>
